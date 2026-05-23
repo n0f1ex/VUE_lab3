@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 3</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; line-height: 1.5; }
+        section { margin-bottom: 30px; padding: 15px; border: 1px solid #ccc; background: #fafafa; }
+        table { border-collapse: collapse; margin: 10px 0; }
+        th, td { border: 1px solid #333; padding: 8px 12px; text-align: left; }
+        
+        .calc-grid { 
+            display: grid; 
+            grid-template-columns: repeat(4, 60px); 
+            gap: 8px; 
+            margin-top: 10px; 
+        }
+        .calc-grid button { height: 45px; font-size: 18px; cursor: pointer; }
+        #calc-display { width: 256px; padding: 10px; font-size: 20px; margin-bottom: 5px; text-align: right; box-sizing: border-box; }
+        
+        /* Задание 2: отключение выделения на уровне CSS (дублирует DOM API для надежности) */
+        body { user-select: none; -webkit-user-select: none; }
+    </style>
+</head>
+<body>
+
+    <!-- Задание 1 -->
+    <section id="task1">
+        <h1><p>Добро пожаловать!</p></h1>
+        <p><i>Приветствуем</i> <u>вас</u> <b>в нашем</b> <a href="https://example.com" target="_blank">магазине</a>!</p>
+        &lt;h1&gt;Теорема Пифагора&lt;\h1&gt;: <i>c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup></i>
+        <table>
+            <tr>
+                <th>Информация</th>
+            </tr>
+            <tr>
+                <td>Старая цена: <s>1000 ₽</s></td>
+                <td>Новая цена: 500 ₽</td>
+            </tr>
+        </table>
+    </section>
+
+<!-- Задания 3 и 4 -->
+    <section id="task3-4">
+        <h2>Задания 3 и 4: Кликер</h2>
+        <p>Количество кликов: <strong id="click-count">0</strong></p>
+        <button id="click-btn" style="padding: 10px 20px; font-size: 16px;">Тык!</button>
+        <p>Средняя скорость: <span id="cps-display">0.00</span> кликов/сек</p>
+    </section>
+
+    <!-- Задания 5 и 6 -->
+    <section id="task5-6">
+        <h2>Задания 5 и 6: Калькулятор с поддержкой скобок</h2>
+        <input type="text" id="calc-display" readonly placeholder="0">
+        <div class="calc-grid">
+            <button data-val="7">7</button><button data-val="8">8</button><button data-val="9">9</button><button data-val="/">/</button>
+            <button data-val="4">4</button><button data-val="5">5</button><button data-val="6">6</button><button data-val="*">*</button>
+            <button data-val="1">1</button><button data-val="2">2</button><button data-val="3">3</button><button data-val="-">-</button>
+            <button data-val="0">0</button><button data-val=".">.</button><button data-val="=">=</button><button data-val="+">+</button>
+            <button data-val="C">C</button><button data-val="(">(</button><button data-val=")">)</button>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>

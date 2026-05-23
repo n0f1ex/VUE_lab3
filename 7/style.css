@@ -1,0 +1,243 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Times New Roman", Times, serif;
+    color: #222;
+    background: #fff;
+}
+
+/* --- Стили для верхней части (Приветствие и Теорема) --- */
+h1 {
+    font-size: 32px;
+    margin: 20px;
+    font-weight: 700;
+}
+
+.greeting {
+    font-size: 20px;
+    margin: 20px;
+    margin-bottom: 20px;
+}
+
+/* Базовые цвета букв */
+.red { color: red; }
+.blue { color: blue; }
+
+/* Стили шрифта */
+.italic { font-style: italic; }
+.bold { font-weight: bold; }
+
+/* Специальное подчеркивание с чередованием цвета (для слова "вас") */
+.underline-alt {
+    border-bottom: 2px solid;
+}
+
+/* Стили для гиперссылки */
+a {
+    color: blue;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: darkblue;
+}
+
+/* Моноширинный шрифт для "Теорема Пифагора" */
+.theorem-title {
+    font-family: "Courier New", Courier, monospace;
+}
+
+/* Остальные стили страницы */
+.theorem-line {
+    font-size: 18px;
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #00FFFF;
+    font-size: 18px;
+    margin: 20px;
+    margin-bottom: 30px;
+}
+
+td {
+    border: 2px solid black;
+    padding: 10px;
+}
+
+.header-cell {
+    font-weight: normal;
+}
+
+.task {
+    padding: 24px;
+}
+
+.task-1 h2,
+.task-1 h1,
+.task-1 h3,
+.task-1 p {
+    margin: 0 0 12px;
+}
+
+.formula {
+    font-size: 20px;
+}
+
+.price {
+    font-size: 18px;
+}
+
+.old-price {
+    text-decoration: line-through;
+    margin-right: 16px;
+    color: #666;
+}
+
+.new-price {
+    color: #000;
+    font-weight: 700;
+}
+
+.device-indicator {
+    min-height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.device-indicator .desktop,
+.device-indicator .tablet,
+.device-indicator .mobile {
+    display: none;
+}
+
+@media (min-width: 1024px) {
+    .device-indicator .desktop {
+        display: inline;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 1023.98px) {
+    .device-indicator .tablet {
+        display: inline;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .device-indicator .mobile {
+        display: inline;
+    }
+}
+
+.sticky-menu {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: #222;
+    padding: 12px 24px;
+}
+
+.sticky-menu nav {
+    display: flex;
+    gap: 28px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.sticky-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.sticky-menu a:hover {
+    text-decoration: underline;
+}
+
+.blue-circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: blue;
+    
+    position: fixed; /* Позволяет перемещаться поверх всего контента */
+    pointer-events: none; /* Круг не блокирует клики по ссылкам под ним */
+    z-index: 9999; /* Круг будет всегда сверху */
+    
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.mockup-page {
+    padding: 40px 0 80px;
+}
+
+.page-wrap {
+    width: 520px;
+    max-width: calc(100% - 32px);
+    margin: 0 auto;
+    text-align: center;
+}
+
+.logo {
+    margin: 0 0 18px;
+    font-size: 28px;
+    font-weight: 700;
+}
+
+.top-nav,
+.har,
+.col,
+.footer {
+    background: #e9e9e9;
+}
+
+.top-nav {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 12px 10px;
+    margin-bottom: 14px;
+    font-size: 14px;
+}
+
+.top-nav a {
+    color: #6f5c87;
+}
+
+.har {
+    min-height: 94px;
+    padding: 14px;
+    margin-bottom: 14px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    font-size: 14px;
+}
+.columns {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 14px;
+}
+
+.col {
+    flex: 1;
+    min-height: 100px;
+    padding: 14px 8px;
+    font-size: 14px;
+}
+
+.footer {
+    padding: 14px;
+    font-size: 14px;
+}

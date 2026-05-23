@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Лабораторная работа 3 CSS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Интересный текст -->
+    <h1>Добро пожаловать!</h1>
+
+    <p class="greeting">
+        <span class="italic">
+            <span class="red">П</span><span class="blue">р</span><span class="red">и</span><span class="blue">в</span><span class="red">е</span><span class="blue">т</span><span class="red">с</span><span class="blue">т</span><span class="red">в</span><span class="blue">у</span><span class="red">е</span><span class="blue">м</span>
+        </span> 
+        
+        <span>
+            <span class="red underline-alt">в</span><span class="blue underline-alt">а</span><span class="red underline-alt">с</span>
+        </span> 
+        
+        <span class="bold">
+            <span class="blue">в </span><span class="red">н</span><span class="blue">а</span><span class="red">ш</span><span class="blue">е</span><span class="red">м</span>
+        </span> 
+        
+        <a href="https://example.com">магазине</a>!
+    </p>
+
+    <p class="theorem-line">
+        &lt;h1&gt;<span class="theorem-title">Теорема Пифагора</span>&lt;/h1&gt;: 
+	<span class="italic">
+            c<sup>2</sup> = a<sup>2</sup> + b<sup>2</sup>
+	</span> 
+    </p>
+
+    <!-- Таблица с ценами -->
+    <table>
+        <tr>
+            <td colspan="2" class="header-cell">Информация</td>
+        </tr>
+        <tr>
+            <td>Старая цена: <del>1000 ₽</del></td>
+            <td>Новая цена: 500 ₽</td>
+        </tr>
+    </table>
+
+    <!-- Изменять параметры страницы -->
+    <div class="device-indicator">
+        <span class="desktop">Desktop</span>
+        <span class="tablet">Tablet</span>
+        <span class="mobile">Mobile</span>
+    </div>
+
+    <!-- Прикольная страница -->
+    <nav class="sticky-menu">
+        <nav>
+            <a href="#">Главная</a>
+            <a href="#">Каталог</a>
+            <a href="#">Контакты</a>
+            <a href="#">О нас</a>
+        </nav>
+    </nav>
+
+
+    <div class="mockup-page">
+        <div class="page-wrap">
+            <h1 class="logo">Логотип</h1>
+            <nav class="top-nav">
+                <a href="#">Домой</a>
+                <a href="#">Товары</a>
+                <a href="#">Услуги</a>
+                <a href="#">О нас</a>
+                <a href="#">Контакты</a>
+            </nav>
+            <div class="har">Характеристика</div>
+            <div class="columns">
+                <div class="col">Колонка 1</div>
+                <div class="col">Колонка 2</div>
+                <div class="col">Колонка 3</div>
+            </div>
+            <div class="footer">© MEPHI 2023</div>
+        </div>
+    </div>
+
+    <!-- Скрипт для круга -->
+    <div class="blue-circle"></div>
+    <script>
+        const circle = document.querySelector('.blue-circle');
+        
+        document.addEventListener('mousemove', (e) => {
+            circle.style.left = e.clientX + 'px';
+            circle.style.top = e.clientY + 'px';
+        });
+    </script>
+</body>
+</html>
